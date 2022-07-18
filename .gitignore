@@ -31,3 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Project output files ###
+logs/
+log/
+*.db
+
+### OS file system ###
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -10,22 +10,33 @@
 	</parent>
 	<groupId>dev.psaux</groupId>
 	<artifactId>poc-chart</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>poc-chart</name>
 	<description>POC project for Chart</description>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+	    <groupId>org.jfree</groupId>
+	    <artifactId>jfreechart</artifactId>
+	    <version>1.5.3</version>
+		</dependency>
+		<dependency>
+	    <groupId>org.knowm.xchart</groupId>
+	    <artifactId>xchart</artifactId>
+	    <version>3.8.1</version>
 		</dependency>
 	</dependencies>
 
@@ -35,6 +46,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/*.log</exclude>
+            <exclude>**/application.properties</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
 		</plugins>
 	</build>
 
